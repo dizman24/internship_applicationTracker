@@ -1,0 +1,8 @@
+*.class
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.jar
+.vscode/
+.DS_Store
