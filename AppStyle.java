@@ -1,5 +1,5 @@
 import javax.swing.*;
-import javax.swing.border.AbstractBorder;
+// import javax.swing.border.AbstractBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.JTableHeader;
 import javax.swing.plaf.basic.BasicButtonUI;
@@ -180,6 +180,10 @@ public class AppStyle {
                         source, value, selected, focused, row, column
                     );
 
+                    if (source.convertColumnIndexToModel(column) == 0) {
+                        setText(String.valueOf(row + 1));
+                    }
+
                     setFont(NORMAL);
                     setBackground(selected ? SELECTION : SURFACE);
                     setForeground(selected ? GREEN : TEXT);
@@ -189,7 +193,7 @@ public class AppStyle {
                             BorderFactory.createLineBorder(
                                 focused ? GREEN : getBackground()
                             ),
-                            BorderFactory.createEmptyBorder(0, 10, 0, 10)
+                            BorderFactory.createEmptyBorder(0, 19, 0, 10)
                         )
                     );
 
@@ -202,7 +206,7 @@ public class AppStyle {
         JTableHeader header = table.getTableHeader();
         header.setReorderingAllowed(false);
         header.setPreferredSize(new Dimension(0, 40));
-        
+
         DefaultTableCellRenderer headerRenderer =
             new DefaultTableCellRenderer() {
                 @Override

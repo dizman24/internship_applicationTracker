@@ -80,8 +80,9 @@ public class ApplicationTrackerGUI {
                 new FlowLayout(FlowLayout.RIGHT)
             );
             buttons.add(refreshButton);
-            buttons.add(addButton);
             buttons.add(deleteButton);
+            buttons.add(addButton);
+
 
             JPanel topPanel = new JPanel(new BorderLayout(10, 10));
             topPanel.add(form, BorderLayout.CENTER);
@@ -105,6 +106,23 @@ public class ApplicationTrackerGUI {
             };
 
             JTable table = new JTable(tableModel);
+
+            // Application
+            table.getColumnModel().getColumn(0).setPreferredWidth(125);
+            table.getColumnModel().getColumn(0).setMaxWidth(140);
+
+            // Company
+            table.getColumnModel().getColumn(1).setPreferredWidth(140);
+
+            // Position
+            table.getColumnModel().getColumn(2).setPreferredWidth(330);
+
+            // Requirements
+            table.getColumnModel().getColumn(3).setPreferredWidth(240);
+
+            // Deadline
+            table.getColumnModel().getColumn(4).setPreferredWidth(145);
+
             table.setRowHeight(25);
             table.setFillsViewportHeight(true);
 
