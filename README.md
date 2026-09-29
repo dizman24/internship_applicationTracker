@@ -58,3 +58,7 @@ The program creates an `applications.db` file to store your records. This file i
 ## Possible improvements
 
 I would like to add application status tracking, search, and the ability to edit saved applications.
+
+## Screenshot
+
+![Internship Application Tracker desktop interface](images/app-screenshot.png)
