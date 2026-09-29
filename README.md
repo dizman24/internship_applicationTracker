@@ -61,4 +61,4 @@ I would like to add application status tracking, search, and the ability to edit
 
 ## Screenshot
 
-![Internship Application Tracker desktop interface](images/app-screenshot.png)
+![Application screenshot](images/app-screenshot.png)
